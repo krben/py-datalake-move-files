@@ -98,7 +98,7 @@ python app/app.py
 1. **CSV Reading**: Reads filenames from the specified CSV file
 2. **Blob Filtering**: Checks each filename from the CSV against Azure Blob Storage to find matching blobs
 3. **Path Transformation**: Transforms blob paths from source prefix to target prefix
-4. **Parallel Copying**: Uses ThreadPoolExecutor to copy blobs in parallel (default: 16 workers)
+4. **Parallel Copying**: Uses ThreadPoolExecutor to copy blobs in parallel (default: 4 workers)
 5. **Batch Processing**: Processes files in batches of 50 to manage memory efficiently
 6. **Logging**: Provides detailed output about found/missing files and copy operations
 
@@ -106,7 +106,7 @@ python app/app.py
 
 In `app/app.py`, you can adjust:
 
-- `MAX_WORKERS`: Number of parallel threads (default: 16)
+- `MAX_WORKERS`: Number of parallel threads (default: 4)
 - `BATCH_SIZE`: Number of files processed per batch (default: 50)
 - `CSV_FILE_PATH`: Path to the CSV file
 - `target_prefix`: Target location for copied files

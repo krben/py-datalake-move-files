@@ -30,7 +30,7 @@ blob_service_client = BlobServiceClient(
 )
 container_client = blob_service_client.get_container_client(container_name)
 
-MAX_WORKERS = 16  # Tune this based on your machine/network
+MAX_WORKERS = 4  # Tune this based on your machine/network
 
 def copy_and_delete_blob(blob_name):
     """Copy blob to target location and delete original"""
